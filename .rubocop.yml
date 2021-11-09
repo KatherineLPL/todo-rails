@@ -1,0 +1,24 @@
+require:
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 2.7.3
+  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
+  # to ignore them, so only the ones explicitly set in this file are enabled.
+  DisabledByDefault: true
+  Exclude:
+    - "**/templates/**/*"
+    - "**/vendor/**/*"
+    - "actionpack/lib/action_dispatch/journey/parser.rb"
+    - "railties/test/fixtures/tmp/**/*"
+    - "actionmailbox/test/dummy/**/*"
+    - "actiontext/test/dummy/**/*"
+    - "**/node_modules/**/*"
+
+Performance:
+  Enabled: true
+  Exclude:
+    - "**/test/**/*"
+
+Lint:
+  Enabled: true

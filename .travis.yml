@@ -1,0 +1,19 @@
+language: ruby
+
+cache:
+  bundler: true
+
+services:
+  - postgresql
+
+addons:
+  postgresql: '9.6'
+
+before_script:
+  - bundle exec rake db:create db:migrate
+
+script:
+  - bundle exec rspec
+
+notifications:
+  email: false
