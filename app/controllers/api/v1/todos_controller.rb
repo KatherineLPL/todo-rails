@@ -6,9 +6,14 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create
-    todo = create_todo_service(todo_params).call
+    todo = manage_todo_service(todo_params).call
     json_with todo
   end
+
+  def show
+    todo = Todo.find(params[:id])
+    json_with todo
+  end 
 
   private
 
@@ -16,7 +21,7 @@ class Api::V1::TodosController < ApplicationController
     @todo_params ||= TodoDecanter.decant(params[:todo])
   end
 
-  def create_todo_service(args = {})
+  def manage_todo_service(args = {})
     CreateTodos.new(args)
   end
 end
