@@ -6,7 +6,7 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create
-    todo = manage_todo_service(todo_params).call
+    todo = create_todo_service(todo_params).call
     json_with todo
   end
 
@@ -21,7 +21,7 @@ class Api::V1::TodosController < ApplicationController
     @todo_params ||= TodoDecanter.decant(params[:todo])
   end
 
-  def manage_todo_service(args = {})
+  def create_todo_service(args = {})
     CreateTodos.new(args)
   end
 end
