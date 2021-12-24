@@ -5,31 +5,7 @@
     "postdeploy": "bundle exec rake db:migrate && rake db:seed"
   },
   "env": {
-    "APPLICATION_ROOT_URL": {
-      "required": true
-    },
-    "HEROKU_APP_NAME": {
-      "required": true
-    },
-    "LANG": {
-      "required": true
-    },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
-    },
-    "RAILS_LOG_TO_STDOUT": {
-      "required": true
-    },
     "RAILS_SERVE_STATIC_FILES": {
-      "required": true
-    },
-    "SECRET_KEY_BASE": {
-      "required": true
-    },
-    "SENTRY_URL" : {
       "required": true
     }
   },
