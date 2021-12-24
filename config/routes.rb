@@ -6,5 +6,10 @@ Rails.application.routes.draw do
     get '/', to: proc { [200, {}, ['']] }, constraints: { format: 'json' }
   end
 
+  namespace :api do
+    namespace :v1 do
+      resources :todos
+    end
+  end
 
 end
