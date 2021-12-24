@@ -1,4 +1,4 @@
-class CreateTodos
+class ManageTodos
     attr_reader :title, :description, :completed
   
     def initialize(todo={})
