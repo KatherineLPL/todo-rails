@@ -1,3 +1,3 @@
 Decanter.config do |config|
-  config.strict = true
+    config.strict = false
 end
