@@ -22,6 +22,6 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create_todo_service(args = {})
-    CreateTodos.new(args)
+    ManageTodos.new(args)
   end
 end
